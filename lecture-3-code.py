@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon Sep  7 16:38:54 2020
-
-@author: Ellie
 """
 
 import math
@@ -22,7 +20,7 @@ else:
     if x < 0:
         ans = -ans
     print('Cube root of', x, 'is', ans)
-    
+
 # Write a program that asks the user to enter an integer and prints two integers, root and pwr, such that 0 < pwr < 6 and root**pwr is equal to the integer entered by the user. If no such pair of integers exists, it should print a message to that effect.
 
 num = int(input("Enter an integer: "))
