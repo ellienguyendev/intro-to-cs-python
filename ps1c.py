@@ -51,8 +51,9 @@ while portion_down_payment - current_savings >= epsilon:
     if months % 6 == 0:
         annual_salary += annual_salary * semi_annual_raise
     
-    monthly_salary = annual_salary/12
+    monthly_salary = annual_salary/12 
     current_savings += monthly_salary
+    current_savings += current_savings * annual_return_percentage
     
     # Bisection search. Guesses the answer to be half of the low - high range to find the best percentage to save in order to pay down payment within 36 months. Low or high is changed depending on if the guess is too high or too low, decreasing the search by half with each iteration.
     if (ans/10000) * monthly_salary * 36 < portion_down_payment:
