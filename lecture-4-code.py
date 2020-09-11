@@ -16,4 +16,4 @@ def isIN (string_1, string_2):
     else:
         return False
     
-isIN('hell', 'hello')
+    
