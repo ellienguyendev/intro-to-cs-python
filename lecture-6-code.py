@@ -2,14 +2,13 @@
 # -*- coding: utf-8 -*-
 """
 @author: Ellie
-
-Lecture 6 Code and Exercises
+Lecture 6 Code and Practice Exercises
 """
 
 def fib(n):
     """Assume n int >= 0
         Return Fibonacci of n"""
-        
+
     if n == 0 or n == 1:
         return 1
     else:
@@ -31,19 +30,19 @@ def fib(n):
     else:
         fib(n-1) + fib(n-2)
         if n == 2:
-            count += 1 
+            count += 1
 
         return count
-      
+
 fib(5)
 
-# Check if a string is a palindrome 
+# Check if a string is a palindrome
 
 def isPalindrom(s):
     """ Assumes s is a str
         Returns True if s is a palindrome; False otherwise.
         Puncuation marks, blanks, and capitilizations are ignored"""
-        
+
     def toChar(s):
         """ Returns s as a str with no characters other than lowercase letters"""
         s = s.lower
@@ -52,11 +51,11 @@ def isPalindrom(s):
             if c in 'abcdefghijklmnopqrstuv':
                 letters = letters + c
         return letters
-        
+
     def isPal(s):
         if len(s) <= 1:
             return True
         else:
             return s[0] == s[1] and isPal(s[1:-1])
-            
+
     return isPal(toChar(s))
