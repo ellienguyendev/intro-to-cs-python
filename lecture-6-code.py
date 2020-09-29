@@ -93,7 +93,7 @@ def isPalindrom(s):
         s = s.lower
         letters = ''
         for c in s:
-            if c in 'abcdefghijklmnopqrstuv':
+            if c in 'abcdefghijklmnopqrstuvwxyz':
                 letters = letters + c
         return letters
 
@@ -101,13 +101,13 @@ def isPalindrom(s):
         if len(s) <= 1:
             return True
         else:
-            return s[0] == s[1] and isPal(s[1:-1])
+            return s[0] == s[-1] and isPal(s[1:-1])
 
     return isPal(toChar(s))
 
 # Evaluate the lyrics of a song and create a dictionary with how many times each word appears in the song. Then create another function that outputs the most frequent words. Then create a function that outputs how often a word appears a minimum number of times.
 
-lyric_string = "were just ordinary people we dont know which way to go cause were ordinary people maybe we should take it slow take it slow ohh this time well take it slow take it slow, ohh this time well take it slow"
+lyric_string = "were just ordinary people we dont know which way to go cause were ordinary people maybe we should take it slow take it slow ohh this time well take it slow take it slow ohh this time well take it slow"
 
 lyrics_list = lyric_string.split()
 
@@ -145,7 +145,7 @@ most_common_words(lyrics_to_dict(lyrics_list))
 
 def words_often(freqs, minTimes):
     """"Assume freqs a dictionary with words: frequency appeared in a song as the key: value pairs
-        Assume int > 0
+        Assume minTimes int > 0
         Return words that appear >= minTimes"""
         
     result = []
@@ -153,7 +153,6 @@ def words_often(freqs, minTimes):
     
     while not done:
         temp = most_common_words(freqs)
-        print(temp)
         if temp[1] >= minTimes:
             result.append(temp)
             for w in temp[0]:

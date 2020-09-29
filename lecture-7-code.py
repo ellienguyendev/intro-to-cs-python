@@ -5,6 +5,3 @@
 """
 
 # Practice Problems and Exercises from Lecture 7
-
-    
-    
